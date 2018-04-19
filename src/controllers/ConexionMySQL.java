@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controllers;
 
 import java.sql.*;
@@ -12,6 +7,7 @@ public class ConexionMySQL {
     //Para conectar Java con MySQL se necesitan principalmente 4 parametros
     //El primero es el nombre de la base de datos
     public String db = "almacen";
+    //public String db = "almacenver2";
     //El segundo es la url del servidor de base de satos en donde se encuentra alojada
     public String url = "jdbc:mysql://localhost/"+db;
     //El terero es el usaurio de la base de datos
