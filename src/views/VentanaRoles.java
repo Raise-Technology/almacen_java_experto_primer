@@ -5,19 +5,22 @@
  */
 package views;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Cesar Programacion
  */
-public class Roles extends javax.swing.JFrame {
+public class VentanaRoles extends javax.swing.JFrame {
 
     /**
      * Creates new form Roles
      */
-    public Roles() {
+    public VentanaRoles() {
         initComponents();
+        inicializarLista();
+        
     }
 
     /**
@@ -145,6 +148,17 @@ public class Roles extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnGuardarActionPerformed
 
+    public void inicializarLista()
+    {
+       String roles[] = controllers.Roles.consultarRoles();
+       DefaultListModel<String> modeloLista = new DefaultListModel<String>();
+       for(int i=0; i < roles.length; i++)
+       {
+            modeloLista.addElement(roles[i]);
+       }
+       lstRoles.setModel(modeloLista);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -162,20 +176,21 @@ public class Roles extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Roles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaRoles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Roles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaRoles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Roles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaRoles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Roles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaRoles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Roles().setVisible(true);
+                new VentanaRoles().setVisible(true);
             }
         });
     }
