@@ -29,77 +29,94 @@ public class Roles extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jPanel2 = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
+        pnlRoles = new javax.swing.JPanel();
+        sclRoles = new javax.swing.JScrollPane();
+        lstRoles = new javax.swing.JList<>();
+        pnlPermisos = new javax.swing.JPanel();
+        ckbAlmacen = new javax.swing.JCheckBox();
+        ckbInventarios = new javax.swing.JCheckBox();
+        ckbEmpleados = new javax.swing.JCheckBox();
+        btnGuardar = new javax.swing.JButton();
+        ckbOrdenes = new javax.swing.JCheckBox();
+        ckbProductos = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        lstRoles.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Admin", "Almacenista", "Supervisor" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+        lstRoles.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                jList1ValueChanged(evt);
+                lstRolesValueChanged(evt);
             }
         });
-        jScrollPane1.setViewportView(jList1);
+        sclRoles.setViewportView(lstRoles);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlRolesLayout = new javax.swing.GroupLayout(pnlRoles);
+        pnlRoles.setLayout(pnlRolesLayout);
+        pnlRolesLayout.setHorizontalGroup(
+            pnlRolesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlRolesLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sclRoles, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+        pnlRolesLayout.setVerticalGroup(
+            pnlRolesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(sclRoles)
         );
 
-        jCheckBox1.setText("jCheckBox1");
+        ckbAlmacen.setText("Almacen");
 
-        jCheckBox2.setText("jCheckBox2");
+        ckbInventarios.setText("Inventarios");
 
-        jCheckBox3.setText("jCheckBox3");
+        ckbEmpleados.setText("Empleados");
 
-        jButton1.setText("jButton1");
+        btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        ckbOrdenes.setText("Ordenes");
+
+        ckbProductos.setText("Productos");
+
+        javax.swing.GroupLayout pnlPermisosLayout = new javax.swing.GroupLayout(pnlPermisos);
+        pnlPermisos.setLayout(pnlPermisosLayout);
+        pnlPermisosLayout.setHorizontalGroup(
+            pnlPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPermisosLayout.createSequentialGroup()
                 .addGap(70, 70, 70)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jCheckBox3)
-                        .addComponent(jCheckBox2)
-                        .addComponent(jCheckBox1)))
+                .addGroup(pnlPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ckbInventarios)
+                    .addComponent(ckbOrdenes)
+                    .addComponent(ckbEmpleados)
+                    .addComponent(ckbAlmacen)
+                    .addGroup(pnlPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnGuardar)
+                        .addComponent(ckbProductos)))
                 .addContainerGap(149, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        pnlPermisosLayout.setVerticalGroup(
+            pnlPermisosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPermisosLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addComponent(jCheckBox1)
+                .addComponent(ckbAlmacen)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox2)
+                .addComponent(ckbEmpleados)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox3)
-                .addGap(60, 60, 60)
-                .addComponent(jButton1)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addComponent(ckbOrdenes)
+                .addGap(18, 18, 18)
+                .addComponent(ckbInventarios)
+                .addGap(18, 18, 18)
+                .addComponent(ckbProductos)
+                .addGap(18, 18, 18)
+                .addComponent(btnGuardar)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -107,22 +124,26 @@ public class Roles extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlRoles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(pnlPermisos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlRoles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlPermisos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
-        JOptionPane.showMessageDialog(null, jList1.getSelectedValue()+"  "+jList1.getSelectedIndex());
-    }//GEN-LAST:event_jList1ValueChanged
+    private void lstRolesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstRolesValueChanged
+        JOptionPane.showMessageDialog(null, lstRoles.getSelectedValue()+"  "+lstRoles.getSelectedIndex());
+    }//GEN-LAST:event_lstRolesValueChanged
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,13 +181,15 @@ public class Roles extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton btnGuardar;
+    private javax.swing.JCheckBox ckbAlmacen;
+    private javax.swing.JCheckBox ckbEmpleados;
+    private javax.swing.JCheckBox ckbInventarios;
+    private javax.swing.JCheckBox ckbOrdenes;
+    private javax.swing.JCheckBox ckbProductos;
+    private javax.swing.JList<String> lstRoles;
+    private javax.swing.JPanel pnlPermisos;
+    private javax.swing.JPanel pnlRoles;
+    private javax.swing.JScrollPane sclRoles;
     // End of variables declaration//GEN-END:variables
 }
